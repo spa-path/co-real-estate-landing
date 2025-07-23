@@ -25,6 +25,16 @@
       max-width: 420px;
       text-align: center;
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 1s ease-out forwards;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     h1 {
@@ -53,11 +63,14 @@
       text-decoration: none;
       font-size: 1rem;
       border-radius: 6px;
-      transition: background-color 0.2s;
+      transition: all 0.2s ease;
+      transform: scale(1);
     }
 
     .role-button:hover {
       background-color: #0056b3;
+      transform: scale(1.05);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
 
     @media (max-width: 768px) {
@@ -79,9 +92,9 @@
 </head>
 <body>
   <div class="content-box">
-    <h1>Colorado Real Estate Dashboard</h1>
+    <h1>Colorado Real Estate Investment Dashboard</h1>
     <p>
-      Choose your role below to explore home values, rental returns, and appreciation trends in the Colorado Springs area.
+      Choose your experience below to explore home values, rental returns, and appreciation trends in the Colorado Springs area.
     </p>
     <div class="button-group">
       <a href="https://co-real-estate.onrender.com?role=investor" class="role-button">Investor</a>
