@@ -3,53 +3,87 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Co Real Estate DB</title>
+  <title>Colorado Real Estate Investment Dashboard</title>
   <style>
     body {
       margin: 0;
       padding: 0;
       font-family: Arial, sans-serif;
-      background: #f4f4f4;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      background: url('colorado-flag.png') no-repeat center center fixed;
+      background-size: cover;
       height: 100vh;
-      text-align: center;
+      position: relative;
     }
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 20px;
+
+    .content-box {
+      position: absolute;
+      top: 25%;
+      left: 58%;
+      transform: translate(-50%, -50%);
+      background: rgba(255, 255, 255, 0.88);
+      padding: 30px;
+      border-radius: 10px;
+      max-width: 380px;
+      text-align: left;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    }
+
+    .content-box h1 {
+      font-size: 1.6rem;
+      margin-bottom: 15px;
       color: #222;
     }
-    p {
-      font-size: 1.2rem;
-      color: #555;
-      max-width: 600px;
-      margin: 0 20px 30px;
+
+    .content-box p {
+      font-size: 1rem;
+      color: #444;
+      margin-bottom: 0;
     }
-    a.button {
-      display: inline-block;
-      padding: 15px 30px;
+
+    .enter-button {
+      position: absolute;
+      top: 50%;
+      left: 29.5%;
+      transform: translate(-50%, -50%);
       background-color: #007bff;
       color: white;
-      text-decoration: none;
-      font-size: 1.1rem;
+      padding: 14px 26px;
+      border: none;
       border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
       transition: background-color 0.2s;
     }
-    a.button:hover {
+
+    .enter-button:hover {
       background-color: #0056b3;
+    }
+
+    @media (max-width: 768px) {
+      .content-box {
+        left: 50%;
+        top: 30%;
+        padding: 20px;
+        max-width: 85%;
+        text-align: center;
+      }
+      .enter-button {
+        top: 70%;
+        left: 50%;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Co Real Estate DB</h1>
-  <p>
-    Explore rental investment opportunities across the Colorado Springs area.  
-    Analyze income, appreciation, and cash-on-cash returns by ZIP code, 
-    all backed by public Zillow data and customizable assumptions.
-  </p>
-  <a href="https://co-real-estate.onrender.com" class="button">Enter</a>
+  <div class="content-box">
+    <h1>Colorado Real Estate Investment Dashboard</h1>
+    <p>
+      Explore rental investment opportunities across the Colorado Springs area.<br/>
+      Analyze income, appreciation, and cash-on-cash returns by ZIP code, all backed by public Zillow data and customizable assumptions.
+    </p>
+  </div>
+  <a href="https://co-real-estate.onrender.com" class="enter-button">Enter</a>
 </body>
 </html>
