@@ -22,7 +22,7 @@
       padding: 40px;
       margin-right: 6%;
       border-radius: 12px;
-      max-width: 400px;
+      max-width: 420px;
       text-align: center;
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     }
@@ -39,9 +39,15 @@
       margin-bottom: 25px;
     }
 
-    a.button {
-      display: inline-block;
-      padding: 12px 28px;
+    .button-group {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .role-button {
+      padding: 12px 24px;
       background-color: #007bff;
       color: white;
       text-decoration: none;
@@ -50,7 +56,7 @@
       transition: background-color 0.2s;
     }
 
-    a.button:hover {
+    .role-button:hover {
       background-color: #0056b3;
     }
 
@@ -64,6 +70,10 @@
         padding: 25px;
         max-width: 90%;
       }
+      .button-group {
+        flex-direction: column;
+        gap: 15px;
+      }
     }
   </style>
 </head>
@@ -71,11 +81,12 @@
   <div class="content-box">
     <h1>Colorado Real Estate Investment Dashboard</h1>
     <p>
-      Explore rental investment opportunities across the Colorado Springs area.  
-      Analyze income, appreciation, and cash-on-cash returns by ZIP code,  
-      all backed by public Zillow data and customizable assumptions.
+      Choose your experience below to explore home values, rental returns, and appreciation trends in the Colorado Springs area.
     </p>
-    <a href="https://co-real-estate.onrender.com" class="button">Enter</a>
+    <div class="button-group">
+      <a href="https://co-real-estate.onrender.com?role=investor" class="role-button">Investor</a>
+      <a href="https://co-real-estate.onrender.com?role=homebuyer" class="role-button">Home Buyer</a>
+    </div>
   </div>
 </body>
 </html>
