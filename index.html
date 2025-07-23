@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Colorado Real Estate Investment Dashboard</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       padding: 0;
@@ -13,8 +17,21 @@
       background-size: cover;
       height: 100vh;
       display: flex;
-      justify-content: flex-end;
-      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+      position: relative;
+    }
+
+    /* Gradient overlay */
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.15));
+      z-index: 0;
     }
 
     .content-box {
@@ -28,6 +45,7 @@
       opacity: 0;
       transform: translateY(30px);
       animation: fadeInUp 1s ease-out forwards;
+      z-index: 1;
     }
 
     @keyframes fadeInUp {
@@ -73,9 +91,20 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
 
+    footer {
+      position: absolute;
+      bottom: 15px;
+      width: 100%;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #ddd;
+      z-index: 1;
+    }
+
     @media (max-width: 768px) {
       body {
         justify-content: center;
+        align-items: center;
         padding: 20px;
       }
       .content-box {
@@ -101,5 +130,7 @@
       <a href="https://co-real-estate.onrender.com?role=homebuyer" class="role-button">Home Buyer</a>
     </div>
   </div>
+
+  <footer>© 2025 HeuerHomes. All rights reserved.</footer>
 </body>
 </html>
