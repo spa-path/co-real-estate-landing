@@ -12,66 +12,57 @@
       background: url('colorado-flag.png') no-repeat center center fixed;
       background-size: cover;
       height: 100vh;
-      position: relative;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
     }
 
     .content-box {
-      position: absolute;
-      top: 25%;
-      left: 58%;
-      transform: translate(-50%, -50%);
       background: rgba(255, 255, 255, 0.88);
-      padding: 30px;
-      border-radius: 10px;
-      max-width: 380px;
-      text-align: left;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+      padding: 40px;
+      margin-right: 6%;
+      border-radius: 12px;
+      max-width: 400px;
+      text-align: center;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     }
 
-    .content-box h1 {
-      font-size: 1.6rem;
+    h1 {
+      font-size: 1.8rem;
       margin-bottom: 15px;
       color: #222;
     }
 
-    .content-box p {
+    p {
       font-size: 1rem;
       color: #444;
-      margin-bottom: 0;
+      margin-bottom: 25px;
     }
 
-    .enter-button {
-      position: absolute;
-      top: 50%;
-      left: 29.5%;
-      transform: translate(-50%, -50%);
+    a.button {
+      display: inline-block;
+      padding: 12px 28px;
       background-color: #007bff;
       color: white;
-      padding: 14px 26px;
-      border: none;
-      border-radius: 6px;
-      font-size: 1rem;
-      cursor: pointer;
       text-decoration: none;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      font-size: 1rem;
+      border-radius: 6px;
       transition: background-color 0.2s;
     }
 
-    .enter-button:hover {
+    a.button:hover {
       background-color: #0056b3;
     }
 
     @media (max-width: 768px) {
-      .content-box {
-        left: 50%;
-        top: 30%;
+      body {
+        justify-content: center;
         padding: 20px;
-        max-width: 85%;
-        text-align: center;
       }
-      .enter-button {
-        top: 70%;
-        left: 50%;
+      .content-box {
+        margin-right: 0;
+        padding: 25px;
+        max-width: 90%;
       }
     }
   </style>
@@ -80,10 +71,11 @@
   <div class="content-box">
     <h1>Colorado Real Estate Investment Dashboard</h1>
     <p>
-      Explore rental investment opportunities across the Colorado Springs area.<br/>
-      Analyze income, appreciation, and cash-on-cash returns by ZIP code, all backed by public Zillow data and customizable assumptions.
+      Explore rental investment opportunities across the Colorado Springs area.  
+      Analyze income, appreciation, and cash-on-cash returns by ZIP code,  
+      all backed by public Zillow data and customizable assumptions.
     </p>
+    <a href="https://co-real-estate.onrender.com" class="button">Enter</a>
   </div>
-  <a href="https://co-real-estate.onrender.com" class="enter-button">Enter</a>
 </body>
 </html>
